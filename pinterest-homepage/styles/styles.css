@@ -16,6 +16,95 @@ li {
   list-style: none;
 }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 28px 15px 24px;
+}
+
+header h3 {
+  color: #fa617b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  padding: 16px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #414154;
+  font-weight: 700;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header nav .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 24px;
+}
+
+header nav .buttons button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 11px 12px;
+  border-radius: 24px;
+  border: none;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .buttons .login {
+  background: #fa617b;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+header nav .buttons .signup {
+  margin-left: 16px;
+  cursor: pointer;
+  background: #f3f3f3;
+}
+
 .heading {
   margin-top: 120px;
   display: -webkit-box;
