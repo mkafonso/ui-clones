@@ -45,21 +45,19 @@ header {
         border-radius: 24px;
         border: none;
         outline: 0;
-
+        cursor: pointer;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
       }
 
       .login {
         background: $red;
         color: $white;
-        cursor: pointer;
       }
 
       .signup {
         margin-left: 16px;
-        cursor: pointer;
         background: $gray-light;
       }
     }

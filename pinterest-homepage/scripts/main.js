@@ -9,22 +9,48 @@ function enterScreen(index) {
   grid.classList.add("active");
 
   gridColumns.forEach((element) => {
-    element.classList.remove("animate-before");
+    element.classList.remove("animate-before", "animate-after");
   });
+
+  heading.classList.remove("animate-before", "animate-after");
 }
 
-function exitScreen() {}
+function exitScreen(index, exitDelay) {
+  const grid = grids[index];
+  const heading = headings[index];
+  const gridColumns = grid.querySelectorAll(".column");
 
-function setupAnimationCircle({
-  initialScreenIndex,
-  timePerScreen,
-  exitDelay,
-}) {
-  enterScreen(0);
+  gridColumns.forEach((element) => {
+    element.classList.add("animate-after");
+  });
+
+  heading.classList.add("animate-after");
+
+  setTimeout(() => {
+    grid.classList.remove("active");
+  }, exitDelay);
 }
 
-setupAnimationCircle({
-  initialScreenIndex: 0,
+function setupAnimationCycle({ timePerScreen, exitDelay }) {
+  const cycleTime = timePerScreen + exitDelay;
+  let nextIndex = 0;
+
+  function nextCycle() {
+    const currentIndex = nextIndex;
+
+    enterScreen(currentIndex);
+
+    setTimeout(() => exitScreen(currentIndex, exitDelay), timePerScreen);
+
+    nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
+  }
+
+  nextCycle();
+
+  setInterval(nextCycle, cycleTime);
+}
+
+setupAnimationCycle({
   timePerScreen: 2000,
   exitDelay: 200 * 7,
 });

@@ -96,12 +96,13 @@ header nav .buttons button {
   border-radius: 24px;
   border: none;
   outline: 0;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -110,12 +111,10 @@ header nav .buttons button {
 header nav .buttons .login {
   background: #fa617b;
   color: #ffffff;
-  cursor: pointer;
 }
 
 header nav .buttons .signup {
   margin-left: 16px;
-  cursor: pointer;
   background: #f3f3f3;
 }
 
@@ -254,6 +253,6 @@ header nav .buttons .signup {
 }
 
 .item:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 /*# sourceMappingURL=styles.css.map */
